@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function httpGet(theUrl)
+			{
+			    var xmlHttp = new XMLHttpRequest();
+			    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			    xmlHttp.send( null );
+			    return xmlHttp.responseText;
+			}
+			// window.alert(httpGet('https://eyko3oq3hb.execute-api.us-east-2.amazonaws.com/Prod'));
+		</script>
+	</head>
+	<body>
+		<h1>My not so Awesome website(Yet!)</h1>
+	</body>
+</html>
