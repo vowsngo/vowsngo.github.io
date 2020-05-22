@@ -1,0 +1,20 @@
+<html>
+	<head>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			const Http = new XMLHttpRequest();
+			const url='https://eyko3oq3hb.execute-api.us-east-2.amazonaws.com/Prod';
+			Http.open("GET", url);
+			Http.send();
+
+			Http.onreadystatechange = (e) => {
+			  window.alert(Http.responseText)
+			}
+		</script>
+	</head>
+	<body>
+		<h1>My not so Awesome website(Yet!)</h1>
+	</body>
+</html>

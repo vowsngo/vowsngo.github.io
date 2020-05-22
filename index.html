@@ -1,20 +1,89 @@
-<html>
-	<head>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Responsive HTML5 Page Layout Template</title>
+    <meta name="description" content="Simple HTML5 Page layout template with header, footer, sidebar etc.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:   #759ca5    ;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
-		<script type="text/javascript">
-			const Http = new XMLHttpRequest();
-			const url='https://eyko3oq3hb.execute-api.us-east-2.amazonaws.com/Prod';
-			Http.open("GET", url);
-			Http.send();
+.button:hover {background-color: #7ecada }
 
-			Http.onreadystatechange = (e) => {
-			  window.alert(Http.responseText)
-			}
-		</script>
-	</head>
-	<body>
-		<h1>My not so Awesome website(Yet!)</h1>
-	</body>
+.button:active {
+  background-color: #7ecada ;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.fill {object-fit: fill;}
+.contain {object-fit: contain;}
+.cover {object-fit: cover;}
+.scale-down {object-fit: scale-down;}
+.none {object-fit: none;}
+</style>
+
+<body>
+	<header>
+		<div id="logo"><img src="logo.png">VOWS</div>
+		<nav>  
+			<ul>
+				<li><a href="index.html">Home</a>
+				<li><a href="index.html">About Us</a>
+				
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<strong>Information to be added by the NGO about what their aim is in a line</strong>
+	</section>
+	<section id="pageContent">
+		<main role="main">
+			
+			<article>
+				<h2>Aim</h2>
+				<p> Our mission is to contribute towards minimizing human suffering in the field of health, livelihood, education, hivlaids std and  domestic violence.  We believe that prevention through awareness is the best way to control or limit the spread of minimizing suffering.  Initially there was a state of denial about the deadliness of this disease.  Hence millions died and millions more got infected.  Run an integrated community health and development program in a resettlement colony at Madanpur Khadar, with special emphasis on hivlaids awareness and home based care and support.</p>
+			</article>
+			<article>
+				<h2>Donate now</h2>
+				<p>Add information why you need funds and what will funds be used to do etc etc.</p>
+				<button class="button">Donate now</button>
+			</article>
+
+		</main>
+		<aside>
+			<div><a href="https://m.facebook.com/story.php?story_fbid=3810515502355821&id=100001922256906&sfnsn=scwspwa&funlid=Md98nECz7apPbvKn"><img width="300" height="100" src="video1.png" alt="First post"></div>
+			<div><a href="https://m.facebook.com/story.php?story_fbid=3812338848840153&id=100001922256906&sfnsn=scwspwa&funlid=J0WroVu6visYzykC"><img width="300" height="100" src="video.png" alt="First post"></div>
+			<div><a href="https://m.facebook.com/story.php?story_fbid=3806177589456279&id=100001922256906&sfnsn=scwspwa&funlid=WE2eyVG8zn2iS8MQ"><img width="300" height="100" src="video2.png" title="insert title" alt="insert description here"></a></div>
+			
+		</aside>
+	</section>
+	<footer>
+		<p> Be kind :) </p>
+		<address>
+			Contact: <a href="mailto:vowsindia@gmail.com">Mail me</a>
+		</address>
+	</footer>
+
+
+</body>
+
 </html>
