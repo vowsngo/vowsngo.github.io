@@ -65,23 +65,46 @@
 			<article>
 				<h2>Donate now</h2>
 				<p>Add information why you need funds and what will funds be used to do etc etc.</p>
-				<button class="button">Donate now</button>
+				<button class="button" id="rzp-button1">Donate now</button>
 			</article>
 
 		</main>
 		<aside>
-			<div><a href="https://m.facebook.com/story.php?story_fbid=3810515502355821&id=100001922256906&sfnsn=scwspwa&funlid=Md98nECz7apPbvKn"><img width="300" height="100" src="video1.png" alt="First post"></div>
-			<div><a href="https://m.facebook.com/story.php?story_fbid=3812338848840153&id=100001922256906&sfnsn=scwspwa&funlid=J0WroVu6visYzykC"><img width="300" height="100" src="video.png" alt="First post"></div>
-			<div><a href="https://m.facebook.com/story.php?story_fbid=3806177589456279&id=100001922256906&sfnsn=scwspwa&funlid=WE2eyVG8zn2iS8MQ"><img width="300" height="100" src="video2.png" title="insert title" alt="insert description here"></a></div>
+			<div><a href="https://www.facebook.com/story.php?story_fbid=3810515502355821&id=100001922256906&sfnsn=scwspwa&funlid=Md98nECz7apPbvKn"><img width="300" height="100" src="video1.png" alt="First post"></div>
+			<div><a href="https://www.facebook.com/story.php?story_fbid=3812338848840153&id=100001922256906&sfnsn=scwspwa&funlid=J0WroVu6visYzykC"><img width="300" height="100" src="video.png" alt="First post"></div>
+			<div><a href="https://www.facebook.com/story.php?story_fbid=3806177589456279&id=100001922256906&sfnsn=scwspwa&funlid=WE2eyVG8zn2iS8MQ"><img width="300" height="100" src="video2.png" title="insert title" alt="insert description here"></a></div>
 			
 		</aside>
 	</section>
 	<footer>
 		<p> Be kind :) </p>
 		<address>
-			Contact: <a href="mailto:vowsindia@gmail.com">Mail me</a>
+			Contact: <a href="mailto:vowsindia@gmail.com">vowsindia@gmail.com</a>
 		</address>
 	</footer>
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script>
+	var options = {
+		"key": "rzp_test_IuYRDuzZ7HB8Xu",
+		"amount": "100",
+		"currency": "INR",
+		"name": "VOWS NGO",
+		"description": "Test Transaction",
+		"image": "https://github.com/vowsngo/vowsngo.github.io/blob/master/logo.png?raw=true",
+		"order_id": "order_EoKcskvd45SRfe",
+		"handler": function (response){
+			window.location = "http://anirudhb08.github.io/s.html"
+		},
+		"theme": {
+			"color": "#AEC6CF"
+		}
+	};
+	var rzp1 = new Razorpay(options);
+	document.getElementById('rzp-button1').onclick = function(e){
+		rzp1.open();
+		e.preventDefault();
+	}
+	</script>
 
 
 </body>
