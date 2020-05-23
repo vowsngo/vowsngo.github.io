@@ -138,7 +138,16 @@
 						"image": "https://github.com/vowsngo/vowsngo.github.io/blob/master/logo.png?raw=true",
 						"order_id": JSON.parse(this.responseText)['id'],
 						"handler": function (response) {
-							window.location = "http://anirudhb08.github.io/s.html"
+							let capture_url = 'https://otp9ptho7c.execute-api.ap-south-1.amazonaws.com/Prod/capture_payment?order_id=' + JSON.parse(this.responseText)['id'];
+							let xhttp1 = new XMLHttpRequest();
+		  					xhttp1.onreadystatechange=function() {
+		  						if (this.readyState == 4 && this.status == 200) {
+									window.location = "http://anirudhb08.github.io/s.html"
+									console.log(this.responseText)
+								}
+		  					};
+		  					xhttp1.open("GET", capture_url, true);
+		  					xhttp1.send();
 						},
 						"theme": {
 							"color": "#AEC6CF"
